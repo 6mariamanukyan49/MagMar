@@ -1,0 +1,2286 @@
+@import "./mixin.scss";
+
+
+// ========================================
+// HEADER
+// ========================================
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 9999;
+}
+
+
+// ========================================
+// MAIN
+// ========================================
+
+main {
+    width: 100%;
+
+    overflow: hidden;
+
+    padding-top: 80px;
+}
+
+
+// ========================================
+// HOME PAGE HERO
+// ========================================
+
+main .hero {
+    width: 100%;
+
+    padding: 30px 0 40px;
+
+    background-color: #fff;
+
+    h2 {
+        margin: 30px 0;
+
+        padding: 0 20px;
+
+        color: var(--color);
+
+        font-size: 36px;
+
+        line-height: 1.3;
+
+        text-align: center;
+    }
+}
+
+
+// ========================================
+// HOME PAGE IMAGE SLIDER
+// ========================================
+
+.slayd1 {
+    width: 100%;
+
+    overflow: hidden;
+
+    .slaydnkarner {
+        display: flex;
+
+        align-items: center;
+
+        gap: clamp(8px, 1.5vw, 25px);
+
+        width: max-content;
+
+        animation: slide 25s linear infinite;
+
+
+        .nk1 {
+            flex: 0 0 clamp(300px, 70vw, 1400px);
+
+            width: clamp(300px, 70vw, 1400px);
+
+            aspect-ratio: 16 / 9;
+
+            flex-shrink: 0;
+
+            overflow: hidden;
+
+
+            img {
+                display: block;
+
+                width: 100%;
+
+                height: 100%;
+
+                object-fit: cover;
+
+                object-position: center;
+            }
+        }
+    }
+}
+
+
+// ========================================
+// HOME BUTTON
+// ========================================
+
+.mybtn {
+    display: block;
+
+    margin: 35px auto;
+
+    padding: 12px 30px;
+
+    background-color: var(--color) !important;
+
+    color: white !important;
+
+    border: none !important;
+
+    border-radius: 8px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+
+    &:hover {
+        transform: scale(1.05);
+
+        opacity: 0.9;
+    }
+}
+
+
+// ========================================
+// HOME ANIMATION
+// ========================================
+
+@keyframes slide {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 12px));
+    }
+}
+
+
+// ========================================
+// ABOUT HERO
+// ========================================
+
+.about-hero {
+    padding: 100px 0;
+
+    background-color: var(--color-light);
+}
+
+
+// ========================================
+// ABOUT TEXT
+// ========================================
+
+.about-text {
+    padding-right: 40px;
+}
+
+
+.about-subtitle {
+    color: var(--color);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+
+.about-text h1 {
+    color: var(--color-dark);
+
+    font-size: clamp(50px, 6vw, 90px);
+
+    line-height: 0.95;
+
+    font-weight: 700;
+
+    margin-bottom: 35px;
+}
+
+
+.about-description {
+    color: #555;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+
+    max-width: 550px;
+}
+
+
+.about-line {
+    width: 70px;
+
+    height: 3px;
+
+    background-color: var(--color);
+
+    margin: 30px 0 20px;
+}
+
+
+.about-text h3 {
+    color: var(--color);
+
+    font-size: 20px;
+
+    font-weight: 600;
+}
+
+
+// ========================================
+// ABOUT VIDEO AREA
+// ========================================
+
+.about-image {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 600px;
+
+    padding: 0;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: flex-end;
+
+    overflow: hidden;
+}
+
+
+// ========================================
+// RED DECORATIVE DIV
+// ========================================
+
+.about-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 80%;
+
+    height: 80%;
+
+    right: 0;
+
+    bottom: 0;
+
+    background-color: var(--color);
+
+    border-radius: 25px;
+
+    z-index: 0;
+}
+
+
+// ========================================
+// VIDEO CAROUSEL - DESKTOP
+// ========================================
+
+#magmarVideoCarousel {
+    position: relative;
+
+    z-index: 2;
+
+    width: 65%;
+
+    height: 430px;
+
+    margin: 0 5% 8% 0;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background-color: #000;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    box-shadow:
+        0 15px 35px rgba(117, 16, 16, 0.20);
+
+    flex-shrink: 0;
+
+    box-sizing: border-box;
+}
+
+
+// ========================================
+// CAROUSEL INNER
+// ========================================
+
+#magmarVideoCarousel .carousel-inner {
+    width: 88%;
+
+    height: 88%;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    flex-shrink: 0;
+
+    box-sizing: border-box;
+}
+
+
+// ========================================
+// CAROUSEL ITEM
+// ========================================
+
+#magmarVideoCarousel .carousel-item {
+    width: 100%;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+// ========================================
+// VIDEO
+// ========================================
+
+#magmarVideoCarousel video {
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    max-width: 100%;
+
+    max-height: 100%;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    background-color: #000;
+
+    border-radius: 14px;
+
+    box-sizing: border-box;
+}
+
+
+// ========================================
+// CAROUSEL INDICATORS
+// ========================================
+
+#magmarVideoCarousel .carousel-indicators {
+    z-index: 5;
+
+    margin-bottom: 8px;
+}
+
+
+#magmarVideoCarousel .carousel-indicators button {
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    margin: 0 5px;
+}
+
+
+// ========================================
+// CAROUSEL ARROWS
+// ========================================
+
+#magmarVideoCarousel .carousel-control-prev,
+#magmarVideoCarousel .carousel-control-next {
+    z-index: 6;
+
+    width: 15%;
+
+    height: 100%;
+}
+
+
+#magmarVideoCarousel .carousel-control-prev-icon,
+#magmarVideoCarousel .carousel-control-next-icon {
+    width: 25px;
+
+    height: 25px;
+}
+
+
+// ========================================
+// ABOUT PRODUCTS
+// ========================================
+
+.about-products {
+    padding: 100px 0;
+
+    background-color: #fff;
+}
+
+
+.about-products h2 {
+    color: var(--color-dark);
+
+    font-size: 45px;
+
+    font-weight: 700;
+}
+
+
+// ========================================
+// PRODUCT CARDS
+// ========================================
+
+.about-card {
+    height: 100%;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border: 1px solid #eadada;
+
+    background-color: #fff;
+
+    transition: 0.3s ease;
+}
+
+
+.about-card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--color);
+
+    box-shadow:
+        0 10px 30px rgba(117, 16, 16, 0.1);
+}
+
+
+.card-icon {
+    color: var(--color);
+
+    font-size: 35px;
+
+    margin-bottom: 20px;
+}
+
+
+.about-card h3 {
+    color: var(--color-dark);
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+
+.about-card p {
+    color: #666;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+// ========================================
+// ABOUT QUOTE
+// ========================================
+
+.about-quote {
+    padding: 80px 0;
+
+    background-color: var(--color);
+}
+
+
+.quote-box {
+    color: white;
+}
+
+
+.quote-box h2 {
+    font-size: clamp(35px, 5vw, 60px);
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+    margin: 20px 0 0;
+}
+
+
+// ============================================================
+// TABLET
+// 768px - 991px
+// ============================================================
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .about-hero {
+        padding: 80px 0;
+    }
+
+
+    .about-text {
+        padding-right: 0;
+    }
+
+
+    // ========================================
+    // TABLET VIDEO AREA
+    // ========================================
+
+    .about-image {
+        position: relative;
+
+        width: 100%;
+
+        height: 500px;
+
+        min-height: 500px;
+
+        padding: 0;
+
+        display: flex;
+
+        justify-content: flex-end;
+
+        align-items: flex-end;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+    }
+
+
+    // ========================================
+    // TABLET RED DIV
+    // ========================================
+
+    .about-image::before {
+        content: "";
+
+        position: absolute;
+
+        width: 82%;
+
+        height: 80%;
+
+        right: 0;
+
+        bottom: 0;
+
+        background-color: var(--color);
+
+        border-radius: 22px;
+
+        z-index: 0;
+    }
+
+
+    // ========================================
+    // TABLET CAROUSEL
+    // ========================================
+
+    #magmarVideoCarousel {
+
+        position: relative;
+
+        z-index: 2;
+
+        /*
+        Փոքրացված carousel
+        */
+
+        width: 50%;
+
+        height: 315px;
+
+        /*
+        Աջից և ներքևից պահում ենք
+        կարմիր div-ի սահմանների մեջ
+        */
+
+        margin-top: 0;
+
+        margin-right: 9%;
+
+        margin-bottom: 11%;
+
+        margin-left: 0;
+
+        padding: 0;
+
+        border-radius: 16px;
+
+        background-color: #000;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        overflow: hidden;
+
+        flex-shrink: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    // ========================================
+    // TABLET INNER
+    // ========================================
+
+    #magmarVideoCarousel .carousel-inner {
+
+        width: 80%;
+
+        height: 80%;
+
+        max-width: 100%;
+
+        max-height: 100%;
+
+        overflow: hidden;
+
+        border-radius: 12px;
+
+        flex-shrink: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    // ========================================
+    // TABLET ITEM
+    // ========================================
+
+    #magmarVideoCarousel .carousel-item {
+
+        width: 100%;
+
+        height: 100%;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+    }
+
+
+    // ========================================
+    // TABLET VIDEO
+    // ========================================
+
+    #magmarVideoCarousel video {
+
+        display: block;
+
+        width: 100%;
+
+        height: 100%;
+
+        max-width: 100%;
+
+        max-height: 100%;
+
+        object-fit: contain;
+
+        object-position: center;
+
+        background-color: #000;
+
+        border-radius: 12px;
+
+        box-sizing: border-box;
+    }
+
+
+    // ========================================
+    // TABLET ARROWS
+    // ========================================
+
+    #magmarVideoCarousel .carousel-control-prev,
+    #magmarVideoCarousel .carousel-control-next {
+
+        width: 20%;
+
+        height: 100%;
+
+        z-index: 10;
+    }
+
+
+    #magmarVideoCarousel .carousel-control-prev-icon,
+    #magmarVideoCarousel .carousel-control-next-icon {
+
+        width: 20px;
+
+        height: 20px;
+    }
+
+
+    // ========================================
+    // TABLET INDICATORS
+    // ========================================
+
+    #magmarVideoCarousel .carousel-indicators {
+
+        margin-bottom: 5px;
+
+        z-index: 10;
+    }
+
+
+    #magmarVideoCarousel .carousel-indicators button {
+
+        width: 8px;
+
+        height: 8px;
+
+        margin: 0 4px;
+    }
+}
+
+
+// ============================================================
+// MOBILE
+// ============================================================
+
+@media (max-width: 767px) {
+
+    main {
+        padding-top: 60px;
+    }
+
+
+    // ========================================
+    // HOME
+    // ========================================
+
+    main .hero {
+        padding: 20px 0 30px;
+    }
+
+
+    main .hero h2 {
+        padding: 0 15px;
+
+        font-size: 22px;
+
+        line-height: 1.3;
+
+        margin: 80px 0 30px;
+    }
+
+
+    .slayd1 .slaydnkarner {
+        gap: 10px;
+    }
+
+
+    .slayd1 .slaydnkarner .nk1 {
+
+        width: 85vw;
+
+        flex: 0 0 85vw;
+
+        aspect-ratio: 16 / 9;
+    }
+
+
+    .mybtn {
+
+        margin: 25px auto;
+
+        padding: 10px 25px;
+
+        font-size: 16px;
+    }
+
+
+    // ========================================
+    // ABOUT
+    // ========================================
+
+    .about-hero {
+        padding: 60px 0;
+    }
+
+
+    .about-text {
+
+        padding-right: 0;
+
+        text-align: center;
+    }
+
+
+    .about-text h1 {
+        font-size: 55px;
+    }
+
+
+    .about-description {
+
+        font-size: 16px;
+
+        max-width: 100%;
+    }
+
+
+    .about-line {
+
+        margin: 25px auto 20px;
+    }
+
+
+    // ========================================
+    // MOBILE VIDEO AREA
+    // ========================================
+
+    .about-image {
+
+        position: relative;
+
+        width: 100%;
+
+        height: 430px;
+
+        min-height: 430px;
+
+        padding: 0;
+
+        display: flex;
+
+        justify-content: flex-end;
+
+        align-items: flex-end;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+    }
+
+
+    // ========================================
+    // MOBILE RED DIV
+    // ========================================
+
+    .about-image::before {
+
+        content: "";
+
+        position: absolute;
+
+        width: 88%;
+
+        height: 78%;
+
+        right: 0;
+
+        bottom: 0;
+
+        background-color: var(--color);
+
+        border-radius: 22px;
+
+        z-index: 0;
+    }
+
+
+    // ========================================
+    // MOBILE CAROUSEL
+    // ========================================
+
+    #magmarVideoCarousel {
+
+        position: relative;
+
+        z-index: 2;
+
+        width: 68%;
+
+        height: 300px;
+
+        margin: 0 6% 7% 0;
+
+        padding: 0;
+
+        border-radius: 16px;
+
+        background-color: #000;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        overflow: hidden;
+
+        flex-shrink: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    // ========================================
+    // MOBILE INNER
+    // ========================================
+
+    #magmarVideoCarousel .carousel-inner {
+
+        width: 80%;
+
+        height: 80%;
+
+        max-width: 100%;
+
+        max-height: 100%;
+
+        overflow: hidden;
+
+        border-radius: 12px;
+
+        flex-shrink: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    // ========================================
+    // MOBILE ITEM
+    // ========================================
+
+    #magmarVideoCarousel .carousel-item {
+
+        width: 100%;
+
+        height: 100%;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+    }
+
+
+    // ========================================
+    // MOBILE VIDEO
+    // ========================================
+
+    #magmarVideoCarousel video {
+
+        display: block;
+
+        width: 100%;
+
+        height: 100%;
+
+        max-width: 100%;
+
+        max-height: 100%;
+
+        object-fit: contain;
+
+        object-position: center;
+
+        background-color: #000;
+
+        border-radius: 12px;
+
+        box-sizing: border-box;
+    }
+
+
+    // ========================================
+    // MOBILE ARROWS
+    // ========================================
+
+    #magmarVideoCarousel .carousel-control-prev,
+    #magmarVideoCarousel .carousel-control-next {
+
+        z-index: 10;
+
+        width: 20%;
+
+        height: 100%;
+    }
+
+
+    #magmarVideoCarousel .carousel-control-prev-icon,
+    #magmarVideoCarousel .carousel-control-next-icon {
+
+        width: 20px;
+
+        height: 20px;
+    }
+
+
+    // ========================================
+    // MOBILE INDICATORS
+    // ========================================
+
+    #magmarVideoCarousel .carousel-indicators {
+
+        z-index: 10;
+
+        margin-bottom: 5px;
+    }
+
+
+    #magmarVideoCarousel .carousel-indicators button {
+
+        width: 7px;
+
+        height: 7px;
+
+        margin: 0 4px;
+    }
+
+
+    // ========================================
+    // PRODUCTS
+    // ========================================
+
+    .about-products {
+
+        padding: 60px 0;
+    }
+
+
+    .about-products h2 {
+
+        font-size: 38px;
+    }
+
+
+    // ========================================
+    // QUOTE
+    // ========================================
+
+    .about-quote {
+
+        padding: 60px 0;
+    }
+}
+
+
+// ============================================================
+// SMALL MOBILE
+// ============================================================
+
+@media (max-width: 475px) {
+
+    .about-image {
+
+        width: 100%;
+
+        height: 380px;
+
+        min-height: 380px;
+
+        overflow: hidden;
+
+        display: flex;
+
+        justify-content: flex-end;
+
+        align-items: flex-end;
+    }
+
+
+    // ========================================
+    // SMALL MOBILE RED DIV
+    // ========================================
+
+    .about-image::before {
+
+        width: 90%;
+
+        height: 78%;
+
+        right: 0;
+
+        bottom: 0;
+
+        border-radius: 20px;
+    }
+
+
+    // ========================================
+    // SMALL MOBILE CAROUSEL
+    // ========================================
+
+    #magmarVideoCarousel {
+
+        width: 66%;
+
+        height: 270px;
+
+        margin: 0 6% 7% 0;
+
+        border-radius: 15px;
+
+        overflow: hidden;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        box-sizing: border-box;
+    }
+
+
+    // ========================================
+    // SMALL MOBILE INNER
+    // ========================================
+
+    #magmarVideoCarousel .carousel-inner {
+
+        width: 78%;
+
+        height: 78%;
+
+        max-width: 100%;
+
+        max-height: 100%;
+
+        overflow: hidden;
+
+        border-radius: 11px;
+
+        box-sizing: border-box;
+    }
+
+
+    // ========================================
+    // SMALL MOBILE VIDEO
+    // ========================================
+
+    #magmarVideoCarousel video {
+
+        display: block;
+
+        width: 100%;
+
+        height: 100%;
+
+        max-width: 100%;
+
+        max-height: 100%;
+
+        object-fit: contain;
+
+        object-position: center;
+
+        border-radius: 11px;
+
+        box-sizing: border-box;
+    }
+
+
+    // ========================================
+    // SMALL MOBILE ARROWS
+    // ========================================
+
+    #magmarVideoCarousel .carousel-control-prev,
+    #magmarVideoCarousel .carousel-control-next {
+
+        width: 22%;
+    }
+
+
+    #magmarVideoCarousel .carousel-control-prev-icon,
+    #magmarVideoCarousel .carousel-control-next-icon {
+
+        width: 17px;
+
+        height: 17px;
+    }
+
+
+    // ========================================
+    // SMALL MOBILE INDICATORS
+    // ========================================
+
+    #magmarVideoCarousel .carousel-indicators {
+
+        margin-bottom: 4px;
+    }
+
+
+    #magmarVideoCarousel .carousel-indicators button {
+
+        width: 6px;
+
+        height: 6px;
+
+        margin: 0 3px;
+    }
+
+
+    // ========================================
+    // SMALL MOBILE TEXT
+    // ========================================
+
+    .about-text h1 {
+
+        font-size: 48px;
+    }
+
+
+    .about-description {
+
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    .about-products h2 {
+
+        font-size: 34px;
+    }
+}
+
+// ============================================================
+// MENU PAGE
+// ============================================================
+
+.menu-page {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 80px;
+    background-color: #fff;
+}
+
+
+// ============================================================
+// MENU HERO
+// ============================================================
+
+.menu-hero {
+    padding: 90px 0 60px;
+    text-align: center;
+    background-color: var(--color-light);
+}
+
+
+.menu-small-title {
+    margin-bottom: 18px;
+
+    color: var(--color);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+
+.menu-hero h1 {
+    margin: 0 auto 20px;
+
+    color: var(--color-dark);
+
+    font-size: clamp(45px, 7vw, 85px);
+
+    line-height: 1;
+
+    font-weight: 700;
+}
+
+
+.menu-description {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color: #666;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+// ============================================================
+// CATEGORY LINKS
+// ============================================================
+
+.menu-categories {
+    padding: 70px 0 100px;
+
+    background-color: #fff;
+}
+
+
+.category-links {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid #eadada;
+    border-bottom: 1px solid #eadada;
+}
+
+
+// ============================================================
+// CATEGORY BUTTON
+// ============================================================
+
+.category-link {
+    position: relative;
+
+    min-height: 100px;
+
+    padding: 20px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    border: none;
+
+    border-right: 1px solid #eadada;
+
+    background-color: transparent;
+
+    color: var(--color-dark);
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.35s ease,
+        color 0.35s ease,
+        padding 0.35s ease;
+}
+
+
+.category-link:last-child {
+    border-right: none;
+}
+
+
+// ============================================================
+// NUMBER
+// ============================================================
+
+.category-number {
+    color: var(--color);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    transition: color 0.3s ease;
+}
+
+
+// ============================================================
+// NAME
+// ============================================================
+
+.category-name {
+    flex: 1;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    transition: transform 0.35s ease;
+}
+
+
+// ============================================================
+// ARROW
+// ============================================================
+
+.category-arrow {
+    font-size: 25px;
+
+    opacity: 0;
+
+    transform: translateX(-10px);
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+}
+
+
+// ============================================================
+// HOVER
+// ============================================================
+
+.category-link:hover {
+
+    background-color: var(--color);
+
+    color: #fff;
+
+    padding-left: 32px;
+}
+
+
+.category-link:hover .category-number {
+    color: #ffdede;
+}
+
+
+.category-link:hover .category-name {
+    transform: translateX(5px);
+}
+
+
+.category-link:hover .category-arrow {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+
+// ============================================================
+// ACTIVE
+// ============================================================
+
+.category-link.active {
+
+    background-color: var(--color);
+
+    color: #fff;
+}
+
+
+.category-link.active .category-number {
+    color: #ffdede;
+}
+
+
+.category-link.active .category-arrow {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+
+// ============================================================
+// PRODUCTS AREA
+// ============================================================
+
+.menu-products {
+    padding-top: 80px;
+}
+
+
+// ============================================================
+// CATEGORY HEADING
+// ============================================================
+
+.category-heading {
+    margin-bottom: 45px;
+}
+
+
+.category-heading span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--color);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+
+.category-heading h2 {
+    margin: 0;
+
+    color: var(--color-dark);
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+// ============================================================
+// PRODUCT CARD
+// ============================================================
+
+.menu-card {
+
+    height: 100%;
+
+    background-color: #fff;
+
+    border: 1px solid #eadada;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+.menu-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: var(--color);
+
+    box-shadow:
+        0 20px 45px rgba(117, 16, 16, 0.13);
+}
+
+
+// ============================================================
+// PRODUCT IMAGE
+// ============================================================
+
+.menu-card-image {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    background-color: #f5eeee;
+}
+
+
+.menu-card-image img {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+
+.menu-card:hover .menu-card-image img {
+
+    transform: scale(1.08);
+}
+
+
+// ============================================================
+// PRODUCT NUMBER
+// ============================================================
+
+.product-number {
+
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background-color: var(--color);
+
+    color: #fff;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+// ============================================================
+// CARD CONTENT
+// ============================================================
+
+.menu-card-content {
+
+    padding: 25px;
+}
+
+
+.menu-card-content h3 {
+
+    margin-bottom: 10px;
+
+    color: var(--color-dark);
+
+    font-size: 22px;
+
+    font-weight: 600;
+}
+
+
+.menu-card-content p {
+
+    min-height: 50px;
+
+    margin-bottom: 20px;
+
+    color: #777;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+// ============================================================
+// PRODUCT BOTTOM
+// ============================================================
+
+.product-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #eee;
+}
+
+
+.price {
+
+    color: var(--color);
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+// ============================================================
+// ORDER BUTTON
+// ============================================================
+
+.product-btn {
+
+    padding: 9px 17px;
+
+    border-radius: 6px;
+
+    background-color: var(--color);
+
+    color: #fff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.product-btn:hover {
+
+    background-color: var(--color-dark);
+
+    color: #fff;
+
+    transform: translateX(4px);
+}
+
+
+// ============================================================
+// BOOTSTRAP TAB ANIMATION
+// ============================================================
+
+.menu-products .tab-pane {
+
+    animation: menuFade 0.4s ease;
+}
+
+
+@keyframes menuFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+// ============================================================
+// TABLET
+// ============================================================
+
+@media (max-width: 991px) {
+
+    .menu-page {
+        padding-top: 70px;
+    }
+
+
+    .menu-hero {
+        padding: 75px 0 50px;
+    }
+
+
+    .category-links {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .category-link {
+
+        border-bottom: 1px solid #eadada;
+    }
+
+
+    .category-link:nth-child(2) {
+        border-right: none;
+    }
+
+
+    .category-link:nth-child(3),
+    .category-link:nth-child(4) {
+        border-bottom: none;
+    }
+
+
+    .category-link:nth-child(3) {
+        border-right: 1px solid #eadada;
+    }
+
+
+    .menu-products {
+        padding-top: 65px;
+    }
+}
+
+
+// ============================================================
+// MOBILE
+// ============================================================
+
+@media (max-width: 767px) {
+
+    .menu-page {
+        padding-top: 60px;
+    }
+
+
+    .menu-hero {
+
+        padding: 60px 20px 45px;
+    }
+
+
+    .menu-small-title {
+
+        font-size: 11px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .menu-hero h1 {
+
+        font-size: 45px;
+
+        line-height: 1.05;
+    }
+
+
+    .menu-description {
+
+        font-size: 15px;
+    }
+
+
+    .menu-categories {
+
+        padding: 45px 0 70px;
+    }
+
+
+    .category-links {
+
+        grid-template-columns: 1fr;
+
+        border-bottom: none;
+    }
+
+
+    .category-link {
+
+        min-height: 75px;
+
+        padding: 18px 20px;
+
+        border-right: none !important;
+
+        border-bottom: 1px solid #eadada !important;
+    }
+
+
+    .category-link:hover {
+
+        padding-left: 27px;
+    }
+
+
+    .category-name {
+
+        font-size: 17px;
+    }
+
+
+    .menu-products {
+
+        padding-top: 55px;
+    }
+
+
+    .category-heading {
+
+        margin-bottom: 30px;
+    }
+
+
+    .category-heading h2 {
+
+        font-size: 42px;
+    }
+
+
+    .menu-card-content {
+
+        padding: 20px;
+    }
+
+
+    .menu-card-content h3 {
+
+        font-size: 20px;
+    }
+
+
+    .menu-card-content p {
+
+        font-size: 14px;
+    }
+}
+
+
+// ============================================================
+// SMALL MOBILE
+// ============================================================
+
+@media (max-width: 475px) {
+
+    .menu-hero h1 {
+
+        font-size: 40px;
+    }
+
+
+    .category-heading h2 {
+
+        font-size: 38px;
+    }
+
+
+    .menu-card-image {
+
+        aspect-ratio: 1 / 1.05;
+    }
+}
+// ============================================================
+// BASKET BUTTON
+// ============================================================
+
+.basket-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 9px 14px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: var(--color);
+
+    color: #fff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.basket-btn:hover {
+
+    background-color: var(--color-dark);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(117, 16, 16, 0.20);
+}
+
+
+.basket-btn:active {
+
+    transform: scale(0.95);
+}
+
+
+// ============================================================
+// AFTER ADDING
+// ============================================================
+
+.basket-btn.added {
+
+    background-color: #2e7d32;
+
+    color: #fff;
+}
+/* ================= BASKET ================= */
+
+.basket-page {
+    min-height: 80vh;
+}
+
+
+.basket-hero {
+    padding: 80px 0 50px;
+    text-align: center;
+}
+
+
+.basket-section {
+    padding: 30px 0 80px;
+}
+
+
+.basket-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.basket-item {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    align-items: center;
+    gap: 30px;
+
+    padding: 20px;
+
+    background: #fff;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.basket-product {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.basket-product img {
+    width: 90px;
+    height: 90px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+
+.basket-product h3 {
+    margin: 0 0 8px;
+}
+
+
+.basket-product p {
+    margin: 0;
+
+    font-weight: 600;
+}
+
+
+.basket-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.quantity-btn {
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #222;
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+.quantity {
+    min-width: 25px;
+
+    text-align: center;
+
+    font-weight: 600;
+}
+
+
+.basket-price {
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+.delete-btn {
+    border: none;
+
+    background: transparent;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+.basket-summary {
+    margin-top: 35px;
+
+    padding: 30px;
+
+    background: #fff;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.summary-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-size: 25px;
+
+    margin-bottom: 25px;
+}
+
+
+.summary-buttons {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+.continue-btn,
+.checkout-btn,
+.basket-back-btn {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.continue-btn {
+    color: #222;
+
+    border: 1px solid #222;
+}
+
+
+.checkout-btn {
+    background: #222;
+
+    color: white;
+}
+
+
+.continue-btn:hover,
+.checkout-btn:hover,
+.basket-back-btn:hover {
+    opacity: 0.8;
+}
+
+
+.empty-basket {
+    text-align: center;
+
+    padding: 80px 20px;
+}
+
+
+.empty-icon {
+    font-size: 60px;
+
+    margin-bottom: 20px;
+}
+
+
+.empty-basket h2 {
+    margin-bottom: 10px;
+}
+
+
+.empty-basket p {
+    margin-bottom: 30px;
+}
+
+
+.basket-back-btn {
+    background: #222;
+
+    color: white;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .basket-item {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    .basket-product img {
+        width: 75px;
+        height: 75px;
+    }
+
+
+    .basket-controls {
+        justify-content: flex-start;
+    }
+
+
+    .basket-price {
+        font-size: 18px;
+    }
+
+
+    .delete-btn {
+        text-align: left;
+    }
+
+
+    .summary-buttons {
+        flex-direction: column;
+    }
+
+
+    .continue-btn,
+    .checkout-btn {
+        text-align: center;
+
+        width: 100%;
+    }
+
+}

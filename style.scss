@@ -1,0 +1,45 @@
+@import "./header.scss";
+@import "./main.scss";
+@import "./footer.scss";
+@import "./mixin.scss";
+
+:root {
+    --padd: 20px;
+    --color: #751010;
+    --color-dark: #5a0b0b;
+    --color-light: #f8eeee;
+    --white: #ffffff;
+    --black: #1f1f1f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    color: var(--black);
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu-products .tab-pane {
+    display: none;
+}
+
+.menu-products .tab-pane.show.active {
+    display: block;
+}

@@ -1,0 +1,147 @@
+@import "./mixin.scss";
+
+header {
+    width: 100%;
+    background-color: var(--color);
+
+    // Եթե ուզում ես, որ scroll-ի ժամանակ header-ը վերևում մնա
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+
+    .navbar {
+        min-height: 80px;
+        background-color: var(--color);
+
+        .container {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 130px;
+            height: auto;
+            display: block;
+        }
+    }
+
+    .navbar-nav {
+        align-items: center;
+
+        .nav-link {
+            color: var(--white);
+            font-size: 17px;
+            font-weight: 500;
+
+            padding: 8px 12px;
+
+            transition:
+                color 0.3s ease,
+                background-color 0.3s ease;
+
+            &:hover {
+                color: #ffdede;
+            }
+
+            &.active {
+                color: #ffdede;
+            }
+        }
+    }
+
+    .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+
+    // ========================================
+    // BURGER MENU
+    // ========================================
+
+    .navbar-collapse {
+        background-color: var(--color);
+    }
+}
+
+
+// ========================================
+// TABLET
+// ========================================
+
+@include block1(768px) {
+
+    header {
+
+        .navbar {
+            min-height: 70px;
+        }
+
+        .navbar-brand {
+
+            img {
+                width: 115px;
+            }
+        }
+
+        .navbar-nav {
+
+            .nav-link {
+                font-size: 16px;
+            }
+        }
+
+        .navbar-collapse {
+            background-color: var(--color);
+        }
+    }
+}
+
+
+// ========================================
+// MOBILE
+// ========================================
+
+@include block1(475px) {
+
+    header {
+
+        .navbar {
+            min-height: 60px;
+        }
+
+        .navbar-brand {
+
+            img {
+                width: 105px;
+            }
+        }
+
+        .navbar-collapse {
+            padding: 10px 0;
+
+            background-color: var(--color);
+        }
+
+        .navbar-nav {
+
+            align-items: stretch;
+
+            .nav-link {
+                padding: 10px 15px;
+
+                font-size: 17px;
+
+                text-align: center;
+            }
+        }
+    }
+}
